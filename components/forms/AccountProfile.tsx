@@ -26,6 +26,7 @@ interface Props {
   user: {
     id: string;
     objectId: string;
+    username: string;
     name: string;
     bio: string;
     image: string;
@@ -79,7 +80,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
         values.profile_photo = imageRes[0].fileUrl;
       }
     }
-    // TODO: Upload user profile information into 
+    // Upload user profile information into 
     await updateUser({
       userId:user.id,
       username:values.username,
@@ -154,6 +155,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                     {...field}
                   />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -174,6 +176,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                     {...field}
                   />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -194,6 +197,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                     {...field}
                   />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
