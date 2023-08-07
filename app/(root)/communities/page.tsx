@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 
 // import Searchbar from "@/components/shared/Searchbar";
 // import Pagination from "@/components/shared/Pagination";
-// import CommunityCard from "@/components/cards/CommunityCard";
+import CommunityCard from "@/components/cards/CommunityCard";
 
 import { fetchUser } from "@/lib/actions/user.actions";
 import { fetchCommunities } from "@/lib/actions/community.actions";
@@ -38,7 +38,7 @@ async function Page({
           <p className='no-result'>No Result</p>
         ) : (
           <>
-            {/* {result.communities.map((community) => (
+            {result.communities.map((community) => (
               <CommunityCard
                 key={community.id}
                 id={community.id}
@@ -48,7 +48,7 @@ async function Page({
                 bio={community.bio}
                 members={community.members}
               />
-            ))} */}
+            ))}
           </>
         )}
       </section>
